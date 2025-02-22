@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <title>Opdracht4</title>
+        <style>
+            #uitvoer{
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="button" id="knopA" value="A">
+        <input type="button" id="knopB" value="B">
+        <input type="button" id="knopC" value="C">
+        <input type="button" id="knopD" value="D">
+        <div id="uitvoer"></div>
+        <script>
+            var stringTotaal = ""; 
+            const knop1 = document.getElementById("knopA");
+            knop1.addEventListener("click", AantalKeerGekliktA);
+            const knop2 = document.getElementById("knopB");
+            knop2.addEventListener("click", AantalKeerGekliktB);
+            const knop3 = document.getElementById("knopC");
+            knop3.addEventListener("click", AantalKeerGekliktC);
+            const knop4 = document.getElementById("knopD");
+            knop4.addEventListener("click", AantalKeerGekliktD);
+            counterA = 0;
+            counterB = 0;
+            counterC = 0;
+            counterD = 0;
+        
+            function removeHandler1() {
+                knop1.removeEventListener("click", AantalKeerGekliktA);
+            }
+            function removeHandler2() {
+                knop2.removeEventListener("click", AantalKeerGekliktB);
+            }
+            function removeHandler3() {
+                knop2.removeEventListener("click", AantalKeerGekliktC);
+            }
+            function removeHandler4() {
+                knop2.removeEventListener("click", AantalKeerGekliktD);
+            }
+            function AantalKeerGekliktA(){
+                counterA += 1;
+                stringTotaal += "U heeft op knopA geklikt\n";
+                document.getElementById("uitvoer").style.display = "block";
+                document.getElementById("uitvoer").innerText = stringTotaal;
+                if(counterA == 2){
+                    removeHandler1();
+                    alert("U heeft al op knopA geklikt");
+                }
+            }
+            function AantalKeerGekliktB(){
+                counterB += 1;
+                stringTotaal += "U heeft op knopB geklikt\n";
+                document.getElementById("uitvoer").style.display = "block";
+                document.getElementById("uitvoer").innerText = stringTotaal;
+                if(counterB == 2){
+                    removeHandler2();
+                    alert("U heeft al op knopB geklikt");
+                }
+            }
+            function AantalKeerGekliktC(){
+                counterC += 1;
+                stringTotaal += "U heeft op knopC geklikt\n";
+                document.getElementById("uitvoer").style.display = "block";
+                document.getElementById("uitvoer").innerText = stringTotaal;
+                if(counterC == 2){
+                    removeHandler3();
+                    alert("U heeft al op knopC geklikt");
+                }
+            }
+            function AantalKeerGekliktD(){
+                counterD += 1;
+                stringTotaal += "U heeft op knopD geklikt\n";
+                document.getElementById("uitvoer").style.display = "block";
+                document.getElementById("uitvoer").innerText = stringTotaal;
+                if(counterD == 2){
+                    removeHandler4();
+                    alert("U heeft al op knopD geklikt");
+                }
+            }
+        </script>
+    </body>
+</html>
