@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <title>Opdracht4</title>
+        <style>
+            #uitvoer{
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="button" id="knopA" value="A" onclick="AantalKeerGekliktA()">
+        <input type="button" id="knopB" value="B" onclick="AantalKeerGekliktB()">
+        <input type="button" id="knopC" value="C" onclick="AantalKeerGekliktC()">
+        <input type="button" id="knopD" value="D" onclick="AantalKeerGekliktD()">
+        <div id="uitvoer"></div>
+        <script>
+            var stringTotaal = " "; 
+            function AantalKeerGekliktA(){
+                stringTotaal += "U heeft op knopA gedrukt\n";
+                document.getElementById("uitvoer").style.display = "block";
+                document.getElementById("uitvoer").innerText = stringTotaal;
+            }
+            function AantalKeerGekliktB(){
+                stringTotaal += "U heeft op knopB gedrukt\n";
+                document.getElementById("uitvoer").style.display = "block";
+                document.getElementById("uitvoer").innerText = stringTotaal;
+            }
+            function AantalKeerGekliktC(){
+                stringTotaal += "U heeft op knopC gedrukt\n";
+                document.getElementById("uitvoer").style.display = "block";
+                document.getElementById("uitvoer").innerText = stringTotaal;
+            }
+            function AantalKeerGekliktD(){
+                stringTotaal += "U heeft op knopD gedrukt\n";
+                document.getElementById("uitvoer").style.display = "block";
+                document.getElementById("uitvoer").innerText = stringTotaal;
+            }
+        </script>
+    </body>
+</html>
